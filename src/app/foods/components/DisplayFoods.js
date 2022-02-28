@@ -36,7 +36,7 @@ const DisplayFoods = ({ auth: { loading }, allFoods }) => {
     <main>
       <div className="profiles">
         {allFoods.length > 0 ? (
-          allFoods.map((food) => <DisplayFoodCard key={food.id} food={food} />)
+          foods.map((food) => <DisplayFoodCard key={food.id} food={food} />)
         ) : (
           <h4>No food found...</h4>
         )}
