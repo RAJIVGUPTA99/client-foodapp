@@ -34,10 +34,12 @@ const DisplayFoods = ({ auth: { loading }, allFoods }) => {
 
   return (
     <main>
-      <div className="container">
-        {foods.map((food) => {
-          return <DisplayFoodCard key={food.id} food={food} />;
-        })}
+      <div className="profiles">
+        {allFoods.length > 0 ? (
+          allFoods.map((food) => <DisplayFoodCard key={food.id} food={food} />)
+        ) : (
+          <h4>No food found...</h4>
+        )}
       </div>
       <nav className="pagination">
         <ul className="pagination">
